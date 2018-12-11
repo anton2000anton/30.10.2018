@@ -1,0 +1,24 @@
+#include "iostream"
+#include "conio.h"
+
+using namespace std;
+
+bool IsPrimeNumber(int);
+
+bool IsPrimeNumber(int number)
+{
+	if (number <= 1)
+	{
+		return false;
+	}
+	bool result = true;
+	for (int i = 2; i <= sqrt(number); i++)
+	{
+		if (!(number % i))
+		{
+			result = false;
+			break;
+		}
+	}
+	return result;
+}
